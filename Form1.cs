@@ -45,9 +45,8 @@ namespace Combo
 
         List<string> temperament = new List<string>();
 
-        /* For an improvement
-        List<List<string>> empList = new List<List<string>>();
-        List<string> empListPart = new List<string>();*/
+        /* For an improvement*/
+        List<string> empList = new List<string>();
 
         public Form1()
         {
@@ -110,9 +109,10 @@ namespace Combo
         {
             /*List for chosen cliend information*/
             clientList.Clear();
+            empList.Clear();
 
             lbFinal.Items.Clear();
-            tbFinal.Text = " ";
+            tbFinal1.Text = " ";
 
             /*The name of the best candidate */
             string theName = "";
@@ -227,13 +227,14 @@ namespace Combo
                                 permScore += 2;
                             }
 
-                            lbFinal.Items.Add(Convert.ToString(sqlReader["FIO"]).Replace(" ", "") + " Score: " + Convert.ToString(permScore));
+                            //lbFinal.Items.Add(Convert.ToString(sqlReader["FIO"]).Replace(" ", "") + " Score: " + Convert.ToString(permScore));
 
                             if (permScore >= prevScore)
                             {
-                                theName = Convert.ToString(sqlReader["FIO"]).Replace(" ", "");
+                                empList.Add(Convert.ToString(sqlReader["FIO"]).Replace(" ", "") + ";" + Convert.ToString(permScore));
+                                //theName = Convert.ToString(sqlReader["FIO"]).Replace(" ", "");
                                 prevScore = permScore;
-                                tbFinal.Text = theName + " Score: " + Convert.ToString(permScore);
+                                //tbFinal1.Text = theName + " Score: " + Convert.ToString(permScore);
                             }
                         }
                     }
@@ -248,6 +249,11 @@ namespace Combo
                 if (sqlReader != null)
                 {
                     sqlReader.Close();
+
+                    for (int i = 0; i < empList.Count; i++)
+                    {
+                        lbFinal.Items.Add(empList[i]);
+                    }
                 }
             }
 
