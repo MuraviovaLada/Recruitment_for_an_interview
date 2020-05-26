@@ -252,7 +252,7 @@ namespace Combo
 
                     for (int i = 0; i < empList.Count; i++)
                     {
-                        lbFinal.Items.Add(empList[i]);
+                        lbFinal.Items.Add(empList[empList.Count - 1 - i]);
                     }
                 }
             }
