@@ -42,7 +42,7 @@ namespace Combo
 
         List<string> temperament = new List<string>();
 
-        /* For an improvement
+        /*
         List<List<string>> empList = new List<List<string>>();
         List<string> empListPart = new List<string>();*/
 
@@ -230,7 +230,8 @@ namespace Combo
                             {
                                 theName = Convert.ToString(sqlReader["FIO"]).Replace(" ", "");
                                 prevScore = permScore;
-                                tbFinal.Text = theName + " Score: " + Convert.ToString(permScore);
+                                tbFinal.Text = theName;
+                                tbFinalScore.Text = Convert.ToString(permScore);
                             }
                         }
                     }

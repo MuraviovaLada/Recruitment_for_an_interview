@@ -32,6 +32,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.tbFinal = new System.Windows.Forms.TextBox();
             this.lbFinal = new System.Windows.Forms.ListBox();
+            this.tbFinalScore = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -39,7 +41,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(42, 36);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(403, 24);
+            this.comboBox1.Size = new System.Drawing.Size(396, 24);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -57,23 +59,41 @@
             // 
             this.tbFinal.Location = new System.Drawing.Point(42, 91);
             this.tbFinal.Name = "tbFinal";
-            this.tbFinal.Size = new System.Drawing.Size(403, 22);
+            this.tbFinal.Size = new System.Drawing.Size(273, 22);
             this.tbFinal.TabIndex = 2;
             // 
             // lbFinal
             // 
             this.lbFinal.FormattingEnabled = true;
             this.lbFinal.ItemHeight = 16;
-            this.lbFinal.Location = new System.Drawing.Point(42, 146);
+            this.lbFinal.Location = new System.Drawing.Point(42, 147);
             this.lbFinal.Name = "lbFinal";
-            this.lbFinal.Size = new System.Drawing.Size(403, 260);
+            this.lbFinal.Size = new System.Drawing.Size(396, 260);
             this.lbFinal.TabIndex = 3;
+            // 
+            // tbFinalScore
+            // 
+            this.tbFinalScore.Location = new System.Drawing.Point(376, 91);
+            this.tbFinalScore.Name = "tbFinalScore";
+            this.tbFinalScore.Size = new System.Drawing.Size(62, 22);
+            this.tbFinalScore.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(321, 91);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 17);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Score:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tbFinalScore);
             this.Controls.Add(this.lbFinal);
             this.Controls.Add(this.tbFinal);
             this.Controls.Add(this.button1);
@@ -94,6 +114,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox tbFinal;
         private System.Windows.Forms.ListBox lbFinal;
+        private System.Windows.Forms.TextBox tbFinalScore;
+        private System.Windows.Forms.Label label1;
     }
 }
 
