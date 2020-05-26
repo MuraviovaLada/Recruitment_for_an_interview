@@ -112,7 +112,6 @@ namespace Combo
             empList.Clear();
 
             lbFinal.Items.Clear();
-            tbFinal1.Text = " ";
 
             /*The name of the best candidate */
             string theName = "";
@@ -227,14 +226,10 @@ namespace Combo
                                 permScore += 2;
                             }
 
-                            //lbFinal.Items.Add(Convert.ToString(sqlReader["FIO"]).Replace(" ", "") + " Score: " + Convert.ToString(permScore));
-
                             if (permScore >= prevScore)
                             {
                                 empList.Add(Convert.ToString(sqlReader["FIO"]).Replace(" ", "") + ";" + Convert.ToString(permScore));
-                                //theName = Convert.ToString(sqlReader["FIO"]).Replace(" ", "");
                                 prevScore = permScore;
-                                //tbFinal1.Text = theName + " Score: " + Convert.ToString(permScore);
                             }
                         }
                     }
