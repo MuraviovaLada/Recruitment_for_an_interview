@@ -1,6 +1,5 @@
 ﻿/*
- * sql for database table for clients.
- * sql for database table for employees is the same.
+ * Sql for database table for clients. Sql for database table for employees is the same.
  * 
  * CREATE TABLE [dbo].[Clients] (
     [Id]          INT        IDENTITY (1, 1) NOT NULL,
@@ -20,8 +19,6 @@
     [Smoking]     BIT        DEFAULT ((0)) NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
-
- * 
  */
 
 using System;
